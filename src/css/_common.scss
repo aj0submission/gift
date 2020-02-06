@@ -1,0 +1,257 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    margin: 0 auto;
+	font-family: "futura-pt", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+}
+
+/* header */
+.header {
+	width: 100%;
+	background: #FFF;
+	position: fixed;
+    left: 0;
+	top: 0;
+	z-index: 200;
+	border-bottom: solid 1px rgb(207, 207, 207);
+	&__wrap {
+		width: 960px;
+		height: 100px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+	}
+	&__logo {
+		a {
+			display: block;
+			width: 100%;
+			height: auto;
+			background-repeat: no-repeat;
+			background-position: left top;
+			background-size: contain;
+			background-image: url(/gift/assets/img/company.png);
+			margin: 10px;
+			span {
+				display: block;
+				text-indent: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				font-size: 25px;
+			}
+		}
+	}
+	&__menu {
+		display: flex;
+		margin-left: auto;
+	}
+	&__nav {
+		list-style: none;
+		&__item {
+			margin-left: 25px;
+			display: inline-block;
+			font-weight: bold;
+			a {
+				text-decoration: none;
+				color: #333;
+				vertical-align: middle;
+			}
+			img {
+				margin: 6px;
+				vertical-align: bottom;
+			}
+		}
+	}
+	&__trigger {
+		z-index: 1000;
+		position: fixed;
+		top: 25px;
+		right: 25px;
+		height: 32px;
+		cursor: pointer;
+		&__inner {
+			position: relative;
+			width: 36px;
+		}
+		span {
+			width: 100%;
+			height: 1px;
+			left: 0;
+			display: block;
+			background: #333;
+			position: absolute;
+			transition: top .5s ease, -webkit-transform .6s ease-in-out;
+			transition: transform .6s ease-in-out, top .5s ease;
+			transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
+			&:nth-child(1) {
+			  top: 0;
+			}
+			&:nth-child(2) {
+			  top: 14px;
+			}
+			&:nth-child(3) {
+			  top: 28px;
+			}
+		}
+		&:hover span:nth-child(1) {
+			top: 4px;
+		}
+		&:hover span:nth-child(3) {
+		top: 23px;
+		}
+	}
+}
+
+/* MOBILE MENU */
+.gloval-menu {
+	background: #017e94;
+	color: #fff;
+	position: fixed;
+	top: 100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 990;
+	text-align: center;
+	display: flex;
+	visibility: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	font-size: 29px;
+	opacity: 0;
+	transition: opacity .6s ease, visibility .6s ease;
+	a {
+    	display: block;
+    	color: #fff;
+    	text-decoration: none;
+    	padding: 10px 0;
+    	transition: color .6s ease;
+    	&:hover {
+      	color: #666;
+    	}
+  	}
+	ul {
+    	list-style: none;
+		li {
+			opacity: 0;
+			transform: translateX(200px);
+			transition:  transform .6s ease, opacity .2s ease;
+
+			&:nth-child(2) {
+				transition-delay: .15s;
+			}
+			&:nth-child(3) {
+				transition-delay: .3s;
+			}
+			&:nth-child(4) {
+				transition-delay: .45s;
+			}
+			&:nth-child(5) {
+				transition-delay: .6s;
+			}
+			&:nth-child(6) {
+				transition-delay: .75s;
+			}
+			&:nth-child(7) {
+				transition-delay: .9s;
+			}
+		}
+  	}
+}
+
+.menu-open {
+	overflow: hidden;
+	.gloval-menu {
+		visibility: visible;
+		opacity: 1;
+		li {
+			opacity: 1;
+			transform: translateX(0);
+			transition:  transform 1s ease, opacity .9s ease;
+		}
+	}
+	.header__trigger {
+		span {
+			&:nth-child(1) {
+			  top: 15px;
+			  transform: rotate(45deg);
+			}
+			&:nth-child(2) {
+			  top: 15px;
+			  width: 0;
+			  left: 50%;
+			}
+			&:nth-child(3) {
+			  top: 15px;
+			  transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+/* main */
+.mainarea {
+	width: 100%;
+}
+
+.main_height {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.main_side {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.container {
+    color: #333;
+}
+
+/* footer */
+.site-footer {
+	background: #333;
+	padding: 50px 0;
+}
+.copyright {
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+@media screen and (max-width: 959px) {
+	.header {
+		&__wrap {
+			width: 100%;
+		}
+		&__nav {
+			display: none;
+		}
+		&__trigger {
+			display: flex;
+			&____inner {
+				width: 24px;
+				span {
+					width: 24px;
+				}
+			}
+		}
+	}
+	.main_side {
+		width: 100%;
+		padding: 0 20px;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.sp_br {
+		display: none;
+	}
+	.header__trigger {
+		display: none;
+	}
+}

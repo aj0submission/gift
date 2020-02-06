@@ -1,0 +1,148 @@
+.market_title {
+    border-bottom: 1px solid #ececec;
+    color: #313131;
+}
+
+.cart {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.cartarea {
+    float: left;
+}
+
+.cart_main {
+    width: 640px;
+    margin-right: 20px;
+}
+
+.delivery {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-bottom: 3px;
+    &__info {
+        padding: 20px;
+        text-align: center;
+        &__title {
+            font-size: 18px;
+        }
+        &__date {
+            font-size: 15px;
+            font-weight: bold;
+            color: #e00000;
+        }
+    }
+}
+
+.item_area {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-top: 1px solid #d0d0d0;
+    &__wd {
+        padding: 10px;
+        border-collapse: collapse;
+        border-bottom: 1px solid #d0d0d0;
+    }
+}
+
+.cart_item {
+    width: 100%;
+    &__contents {
+        width: 25%;
+    }
+    .item-img {
+        img {
+            width: 150px;
+            margin: auto;
+            display: block;
+        }
+    }
+    .item_info {
+        font-size: 12px;
+        .info_area {
+            padding: 0 15px;
+            .gifttype {
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .item_price {
+        font-weight: bold;
+        color: #e00000;
+    }
+}
+
+.shopping_btn {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    .btn_wd {
+        width: 280px;
+    }
+    a {
+        margin: auto;
+        display: block;
+        border: 1px solid #000;
+        position: relative;
+        line-height: 1.5em;
+        text-align: center;
+        color: #fff;
+        background: #000;
+        padding: 12px 0 11px;
+        text-decoration: none;
+    }
+}
+
+.cart_right {
+    width: 300px;
+    float: left;
+    border: 1px solid #e7e7e7;
+    padding: 14px;
+    background: #fcfcfc;
+    position: relative;
+}
+
+.payment {
+    margin-top: 8px;
+    padding: 12px 14px 10px;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    line-height: 1.5em;
+    &__item {
+        float: left;
+    }
+    &__number {
+        margin-right: 0px;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+    &__total {
+        padding-top: 10px;
+        margin-top: 5px;
+        font-size: 18px;
+        border-top: 1px solid #e7e7e7;
+        &__number {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .cart_main {
+        width: 100%;
+    }
+    .cart_item {
+        &__contents {
+            width: 100%;
+            display:block;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .cart_right {
+        width: 100%;
+    }
+}

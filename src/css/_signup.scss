@@ -1,0 +1,156 @@
+.container {
+  h1 {
+    font-size: 25px;
+  }
+}
+
+.signup {
+    margin-top: 20px;
+    .btm {
+        padding-bottom: 50px;
+    }
+}
+
+.signup_form {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    text-align: center;
+    &__title {
+        background-color: #f5f5f5;
+        line-height: 44px;
+        font-size: 18px;
+    }
+    &__comment {
+        font-size: 14px;
+        line-height: 150%;
+        padding: 15px 0 30px;
+    }
+    .attention {
+        font-size: 16px;
+        color: #e00000;
+        font-weight: bold;
+    }
+    &__box {
+        width: 800px;
+        margin: auto;
+        text-align: left;
+        padding-bottom: 5px;
+        &__area {
+            width: 400px;
+            margin: auto;
+        }
+        &__btn {
+            margin-top: 40px;
+            width: 296px;
+            .sendbtn {
+                width: 100%;
+                display: block;
+                border: 1px solid #000;
+                position: relative;
+                line-height: 1.5em;
+                text-align: center;
+                color: #fff;
+                background: #000;
+                padding: 12px 0 11px;
+                &:active {
+                    -webkit-transform: translateY(4px);
+                    transform: translateY(4px);
+                    border-bottom: none;
+                }
+            }
+        }
+        &__comment {
+            font-size: 12px;
+            margin-top: 18px;
+        }
+        &__tos {
+            margin-top: 18px;
+        }
+    }
+}
+
+.signup_box {
+    &__title {
+        padding-bottom: 5px;
+        display: block;
+    }
+    &__address {
+        width: 296px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        height: 28px;
+        margin-bottom: 12px;
+    }
+}
+
+/* バリデーション */
+#address_1-error, #address_2-error {
+    font-size: 12px;
+    color: red;
+}
+
+.tos_box {
+    border: 1px solid #c4c4c4;
+    height: 113px;
+    overflow: scroll;
+    &__inner {
+        padding: 10px 10px 10px 30px;
+        font-size: 12px;
+        &__text {
+            margin-top: 10px;
+        }
+    }
+}
+
+.member {
+    &__item {
+        font-weight: bold;
+    }
+    &__user {
+        margin-bottom: 20px;
+        &__wrap {
+            padding: 10px 0;
+        }
+        &__gender {
+            .gendertype {
+                padding-left: 18px;
+                margin-right: 2em;
+            }
+        }
+        .userdata {
+            width: 296px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            height: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .signup_form {
+        &__box {
+            width: 100%;
+            padding-right: 20px;
+            padding-left: 20px;
+            &__area {
+                margin-top: 10px;
+                width: 100%;
+            }
+            &__btn {
+                width: 100%;
+            }
+        }
+    }
+    .signup_box {
+        &__address {
+            width: 100%;
+        }
+    }
+    .member {
+        &__user {
+            .userdata {
+                width: 100%;
+            }
+        }
+    }
+}
