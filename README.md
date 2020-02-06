@@ -27,3 +27,5 @@ webpack,gulp,browserSync
 ### パスワード再設定(/gift/login/repush/)
 ・メールアドレス、生年月日入力欄  
 ・ボタンクリック時、ページ遷移(想定)  
+### カート(/gift/cart/)
+・カート挿入済みを想定して表示
